@@ -1,5 +1,3 @@
-# blog/schema.py
-
 import graphene
 from graphene_django.types import DjangoObjectType
 from .models import Post, Comment
@@ -11,7 +9,7 @@ class PostType(DjangoObjectType):
         model = Post
 
     def resolve_publish_date(self, info):
-        return self.publish_date.strftime("%Y-%m-%d")
+        return self.publish_date
 
 
 class CommentType(DjangoObjectType):
@@ -23,7 +21,6 @@ class CreatePost(graphene.Mutation):
     class Arguments:
         title = graphene.String()
         description = graphene.String()
-        # publish_date = graphene.Date()
         author = graphene.String()
 
     post = graphene.Field(PostType)
@@ -32,8 +29,8 @@ class CreatePost(graphene.Mutation):
         post = Post(
             title=title,
             description=description,
-            publish_date=datetime.now().date(),
             author=author,
+            publish_date=datetime.now().date(),
         )
         post.save()
         return CreatePost(post=post)
@@ -44,7 +41,6 @@ class UpdatePost(graphene.Mutation):
         id = graphene.ID()
         title = graphene.String()
         description = graphene.String()
-        # publish_date = datetime.now().date()
         author = graphene.String()
 
     post = graphene.Field(PostType)

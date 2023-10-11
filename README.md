@@ -31,20 +31,18 @@ GraphQL is a query language for APIs and a runtime for fulfilling those queries 
 
 ### Project setup:
 
-1. Setup Python virtual environmen
-   > `virtualenv env`
+1. Clone the git repository from the link\
+   https://github.com/SandeepR1305/GRAPHQL
+
 2. Activate the Python virtual environment
-   > `env/Scripts/activate`
+   > `cd GRAPHQL/env/Scripts/activate`
 3. install the Python packages
 
    > `pip install django`\
    > `pip install graphene-django`
 
-4. Clone the git repository from the link\
-   https://github.com/SandeepR1305/GRAPHQL
+4. Run Django Server.
 
-5. Unzip the GRAPHQL folder and run the following commands using CMD to run the Project.
-   > `cd GRAPHQL`\
    > `python manage.py runserver`\
    > Click on this link : http://127.0.0.1:8000/graphql
 
