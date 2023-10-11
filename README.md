@@ -74,7 +74,7 @@ createPost(
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "createPost": {
@@ -113,7 +113,7 @@ mutation MyMutation {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "updatePost": {
@@ -149,7 +149,7 @@ mutation MyMutation {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "createComment": {
@@ -175,7 +175,7 @@ mutation MyMutation {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "deleteComment": {
@@ -201,7 +201,7 @@ query MyQuery {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "post": {
@@ -231,7 +231,7 @@ query MyQuery {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "posts": [
@@ -280,7 +280,7 @@ query MyQuery {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "comment": {
@@ -316,7 +316,7 @@ query MyQuery {
 ```
 
 ```json
-// output
+# output
 {
   "data": {
     "comments": [
